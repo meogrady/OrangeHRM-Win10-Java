@@ -31,13 +31,6 @@ public class LoginPageTests {
         LoginPage.loginUsername(driver, "Admin");
         LoginPage.loginPassword(driver, "admin123");
         LoginPage.loginSubmitBtn(driver);
-
-        try {
-            Thread.sleep(500);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-
         Assert.assertEquals(driver.findElement(By.id("welcome")).getText(), "Welcome Admin");
     }
 
