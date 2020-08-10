@@ -18,4 +18,11 @@ public class LoginPageLocators {
         return driver.findElement(By.id("btnLogin"));
     }
 
+    public static WebElement forgot_password_link (WebDriver driver) {
+        return driver.findElement(By.cssSelector("div#forgotPasswordLink a"));
+    }
+
+    public static WebElement login_panel_heading (WebDriver driver) {
+        return driver.findElement(By.id("logInPanelHeading"));
+    }
 }
