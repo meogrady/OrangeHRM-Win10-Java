@@ -25,4 +25,19 @@ public class LoginPageLocators {
     public static WebElement login_panel_heading (WebDriver driver) {
         return driver.findElement(By.id("logInPanelHeading"));
     }
+
+    public static WebElement linkedIn_group_link (WebDriver driver) {
+        return driver.findElement(By.cssSelector("#social-icons a[0]"));
+    }
+
+    public static WebElement facebook_group_link (WebDriver driver) {
+        return driver.findElement(By.cssSelector("#social-icons a[1]"));
+    }
+
+    public static WebElement twitter_group_link (WebDriver driver) {
+        return driver.findElement(By.cssSelector("#social-icons a[2]"));
+    }
+    public static WebElement youtube_group_link (WebDriver driver) {
+        return driver.findElement(By.cssSelector("#social-icons a[3]"));
+    }
 }
