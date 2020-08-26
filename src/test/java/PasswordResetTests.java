@@ -42,7 +42,7 @@ public class PasswordResetTests {
         PasswordResetPage.clickResetPasswordButton(driver);
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click", PasswordResetPage.getPasswordResetMessageText(driver));
+        js.executeScript("arguments[0].getText()", PasswordResetPage.getPasswordResetMessageText(driver));
     }
 
     @Test

@@ -27,4 +27,8 @@ public class PasswordResetPage {
     public static String getPasswordPageHeadingText (WebDriver driver) {
         return PasswordResetPageLocators.passwordResetPageHeading (driver).getText();
     }
+
+    public static String getWarningMessageText (WebDriver driver) {
+        return PasswordResetPageLocators.hiddenMessage(driver).getText();
+    }
 }

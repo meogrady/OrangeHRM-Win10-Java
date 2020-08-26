@@ -1,6 +1,7 @@
+
+import common.SocialMediaLandingPages;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import locators.LoginPageLocators;
-import locators.PasswordResetPageLocators;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
@@ -27,7 +28,7 @@ public class LoginPageTests {
 
     @AfterMethod
     public void tearDown () {
-        driver.close();
+        driver.quit();
     }
 
     ////  POSITIVE TESTS  ////
@@ -36,7 +37,7 @@ public class LoginPageTests {
         LoginPage.setLoginUsername(driver, "Admin");
         LoginPage.setLoginPassword(driver, "admin123");
         LoginPage.clickLoginSubmitBtn(driver);
-        Assert.assertEquals(driver.findElement(By.id("welcome")).getText(), "Welcome Admin");
+        Assert.assertEquals(driver.findElement(By.id("welcome")).getText(), "Welcome Linda");
     }
 
     @Test
@@ -44,7 +45,7 @@ public class LoginPageTests {
         LoginPage.setLoginUsername(driver, "admin");
         LoginPage.setLoginPassword(driver, "admin123");
         LoginPage.clickLoginSubmitBtn(driver);
-        Assert.assertEquals(driver.findElement(By.id("welcome")).getText(), "Welcome Admin");
+        Assert.assertEquals(driver.findElement(By.id("welcome")).getText(), "Welcome Linda");
     }
 
     //// NEGATIVE TESTS ////
@@ -76,6 +77,42 @@ public class LoginPageTests {
     public void test_Forgot_Password_Link_Should_Succeed () {
         LoginPage.clickForgotYourPasswordLink(driver);
         Assert.assertEquals(PasswordResetPage.getPasswordPageHeadingText(driver), "Forgot Your Password?");
+    }
+
+    @Test
+    public void test_Click_On_LinkedIn_Icon_Should_Take_User_To_Landing_Page () {
+        LoginPage.clickLinkedInButton(driver);
+        for (String winHandle : driver.getWindowHandles()) {
+            driver.switchTo().window(winHandle); // switch focus of WebDriver to the next found window handle (that's your newly opened window)
+        }
+        Assert.assertEquals(SocialMediaLandingPages.getLinkedInLandingPageHeaderText(driver), "Make the most of your professional life");
+    }
+
+    @Test
+    public void test_Click_On_Facebook_Icon_Should_Take_User_To_Landing_Page () {
+        LoginPage.clickFacebookButton(driver);
+        for (String winHandle : driver.getWindowHandles()) {
+            driver.switchTo().window(winHandle); // switch focus of WebDriver to the next found window handle (that's your newly opened window)
+        }
+        Assert.assertEquals(SocialMediaLandingPages.getFacebookLandingPageHeaderText(driver), "OrangeHRM - World's Most Popular Opensource HRIS");
+    }
+
+    @Test
+    public void test_Click_On_Twitter_Icon_Should_Take_User_To_Landing_Page () {
+        LoginPage.clickTwitterButton(driver);
+        for (String winHandle : driver.getWindowHandles()) {
+            driver.switchTo().window(winHandle); // switch focus of WebDriver to the next found window handle (that's your newly opened window)
+        }
+        Assert.assertEquals(SocialMediaLandingPages.getTwitterLandingPageHeaderText(driver), "New to Twitter?");
+    }
+
+    @Test
+    public void test_Click_On_Youtube_Icon_Should_Take_User_To_Landing_Page () {
+        LoginPage.clickYoutubeButton(driver);
+        for (String winHandle : driver.getWindowHandles()) {
+            driver.switchTo().window(winHandle); // switch focus of WebDriver to the next found window handle (that's your newly opened window)
+        }
+        Assert.assertEquals(SocialMediaLandingPages.getYoutubeLandingPageHeaderText(driver), "OrangeHRM Inc");
     }
 
 }

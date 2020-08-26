@@ -26,18 +26,23 @@ public class LoginPageLocators {
         return driver.findElement(By.id("logInPanelHeading"));
     }
 
-    public static WebElement linkedIn_group_link (WebDriver driver) {
-        return driver.findElement(By.cssSelector("#social-icons a[0]"));
+    ////
+    ////    Links at bottom of login page
+    ////
+
+    public static WebElement linkedin_group_link (WebDriver driver) {
+        return driver.findElement(By.xpath("//img[@alt='LinkedIn OrangeHRM group']"));
     }
 
     public static WebElement facebook_group_link (WebDriver driver) {
-        return driver.findElement(By.cssSelector("#social-icons a[1]"));
+        return driver.findElement(By.xpath("//img[@alt='OrangeHRM on Facebook']"));
     }
 
     public static WebElement twitter_group_link (WebDriver driver) {
-        return driver.findElement(By.cssSelector("#social-icons a[2]"));
+        return driver.findElement(By.xpath("//img[@alt='OrangeHRM on twitter']"));
     }
+
     public static WebElement youtube_group_link (WebDriver driver) {
-        return driver.findElement(By.cssSelector("#social-icons a[3]"));
+        return driver.findElement(By.xpath("//img[@alt='OrangeHRM on youtube']"));
     }
 }

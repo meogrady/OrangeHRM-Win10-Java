@@ -25,4 +25,8 @@ public class PasswordResetPageLocators {
     public static WebElement hiddenResponseMessageLocator (WebDriver driver) {
         return driver.findElement(By.id("securityAuthentication__csrf_token"));
     }
+
+    public static WebElement hiddenMessage (WebDriver driver) {
+        return driver.findElement(By.className("message warning fadable"));
+    }
 }
