@@ -22,8 +22,8 @@ public class PasswordResetPageLocators {
         return driver.findElement(By.cssSelector("#btnCancel.cancel"));
     }
 
-    public static WebElement hiddenResponseMessageLocator (WebDriver driver) {
-        return driver.findElement(By.id("securityAuthentication__csrf_token"));
+    public static WebElement fadableWarningResponseMessageLocator (WebDriver driver) {
+        return driver.findElement(By.xpath("//*[@id='content']/div[1]/div[3]/div[1]"));
     }
 
     public static WebElement hiddenMessage (WebDriver driver) {

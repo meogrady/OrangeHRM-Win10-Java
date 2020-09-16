@@ -1,9 +1,9 @@
 package pageobjects;
 
-import basepage.BasePage;
 import locators.PasswordResetPageLocators;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
 
 public class PasswordResetPage {
 
@@ -20,8 +20,10 @@ public class PasswordResetPage {
         PasswordResetPageLocators.resetPasswordButton(driver).click();
     }
 
-    public static String getPasswordResetMessageText (WebDriver driver) {
-        return PasswordResetPageLocators.hiddenResponseMessageLocator(driver).getText();
+    public static String getFadablePasswordResetMessageText (WebDriver driver) {
+//        JavascriptExecutor js_exec = (JavascriptExecutor) driver;
+//        return js_exec.executeScript("arguments[0].text;", PasswordResetPageLocators.fadableWarningResponseMessageLocator(driver)).toString();
+        return PasswordResetPageLocators.fadableWarningResponseMessageLocator(driver).getText();
     }
 
     public static String getPasswordPageHeadingText (WebDriver driver) {
