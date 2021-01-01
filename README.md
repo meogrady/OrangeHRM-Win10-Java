@@ -6,8 +6,8 @@
 * [Setup](#setup)
 
 ## General info
-This project is a simple test automation framework and corresponding automated test functional scripts. It's purpose is to provide learning and practice 
-in developing such a framework using the OrangeHRM live demo website. 
+This project is a simple test automation framework and corresponding frontend functional automated test scripts. It's purpose is to provide learning and practice 
+in developing such a framework/tests using the OrangeHRM live demo website. 
 	
 ## Technologies
 Project is created with:
