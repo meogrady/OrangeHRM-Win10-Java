@@ -16,7 +16,7 @@ Project is created with:
 * TestNG version: 7.1.0
 	
 ## Setup
-To run this project, install it locally using npm:
+To run this project, install it locally using nnn:
 
 ```
 $ No setup required
