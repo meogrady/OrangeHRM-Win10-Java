@@ -13,7 +13,7 @@ in developing such a framework/tests using the OrangeHRM live demo website.
 Project is created with:
 * Java version: 11.0.9
 * Selenium Webdriver version: 3.141.59
-* Maven version: n.nn
+* Maven version: 3.0
 * TestNG version: 7.1.0
 	
 ## Setup
