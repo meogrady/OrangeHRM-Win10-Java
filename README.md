@@ -6,14 +6,14 @@
 * [Setup](#setup)
 
 ## General info
-This project is a simple test automation framrwork and corresponding tests.
+This project is a simple test automation framrwork and corresponding automated test scripts.
 	
 ## Technologies
 Project is created with:
 * Java version: 11.0.9
-* Selenium Webdriver verion: 4.nn
+* Selenium Webdriver verion: 3.141.59
 * Maven version: n.nn
-* TestNG version: n.nn
+* TestNG version: 7.1.0
 	
 ## Setup
 To run this project, install it locally using npm:
